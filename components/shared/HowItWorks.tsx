@@ -47,7 +47,7 @@ export default function Component() {
       text: "How",
     },
     {
-      text: "StrathMall",
+      text: "RiaraMall",
     },
     {
       text: "Works",
@@ -78,7 +78,7 @@ export default function Component() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b  from-white to-blue-50">
+    <section className="py-16 bg-gradient-to-b  from-white to-purple-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -86,15 +86,15 @@ export default function Component() {
           transition={{ duration: 0.8 }}
           className="text-center mb-3"
         >
-            <div className="flex justify-center items-center mb-0 sm:hidden">
-            <h2 className="text-4xl font-bold text-blue-600 mb-4">
-              How StrathMall Works
+          <div className="flex justify-center items-center mb-0 sm:hidden">
+            <h2 className="text-4xl font-bold text-purple-600 mb-4">
+              How RiaraMall Works
             </h2>
-            </div>
-            <div className="hidden sm:flex justify-center items-center mb-0">
+          </div>
+          <div className="hidden sm:flex justify-center items-center mb-0">
             <TypewriterEffectSmooth words={words} />
-            </div>
-          <p className="text-xl text-blue-800 max-w-2xl mx-auto">
+          </div>
+          <p className="text-xl text-purple-800 max-w-2xl mx-auto">
             StrathMall connects buyers and student sellers in a secure,
             user-friendly platform. Follow these simple steps to get started:
           </p>
@@ -110,15 +110,15 @@ export default function Component() {
                 translateZ="60"
                 className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 mx-auto"
               >
-                <step.icon className="w-8 h-8 text-blue-600" />
+                <step.icon className="w-8 h-8 text-purple-600" />
               </CardItem>
               <CardItem
                 translateZ="45"
-                className="text-xl font-semibold text-blue-800 mb-2"
+                className="text-xl font-semibold text-purple-800 mb-2"
               >
                 {step.title}
               </CardItem>
-              <CardItem translateZ="30" as="p" className="text-blue-600">
+              <CardItem translateZ="30" as="p" className="text-purple-600">
                 {step.description}
               </CardItem>
             </CardBody>
@@ -133,7 +133,7 @@ export default function Component() {
         >
           <Link href="/seller">
             <Button
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition-colors duration-300 flex items-center"
+              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full text-lg transition-colors duration-300 flex items-center"
               onClick={handleClick}
             >
               Get Started

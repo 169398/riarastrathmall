@@ -15,7 +15,6 @@ import ShoesCategory from "./product/shoesCategory";
 import Electronics from "./product/techCategory";
 import Watches from "./product/watchesCategory";
 import CategoryCarousel from "./product/categoryCarousel";
-import Image from "next/image";
 import HowItWorks from "./HowItWorks";
 import Cakes from "./CakeSection";
 import LastViewedCarousel from "./product/last-viewed-product";
@@ -60,16 +59,16 @@ const HomeContent: React.FC<HomeContentProps> = ({
 }) => {
   return (
     <div>
-      <div className="bg-gradient-to-b   from-white to-blue-50">
+      {/* Hero Section with Purple Branding */}
+      <div className="bg-gradient-to-b from-white to-purple-50">
         <MaxWidthWrapper>
-          <div className="mx-auto flex max-w-3xl flex-col  items-center     py-20 text-center">
-            <h1 className="tracking-tight text-4xl font-bold bg-clip-text text-blue-800 sm:text-6xl">
-              Your marketplace where quality finds{" "}
-              <span className="text-blue-700">you</span>.
+          <div className="mx-auto flex max-w-3xl flex-col items-center py-20 text-center">
+            <h1 className="tracking-tight text-4xl font-bold bg-clip-text text-purple-800 sm:text-6xl">
+              Seamless Selling and Shopping for Riara University
             </h1>
-            <p className="mt-6 max-w-prose text-lg text-blue-800">
-              Welcome to StrathMall. Every product on this platform is verified
-              by our team to ensure our highest quality standards.
+            <p className="mt-6 max-w-prose text-lg text-purple-800">
+              A platform built for Riara University students, offering 24/7
+              access to student-run shops
             </p>
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row">
@@ -77,32 +76,23 @@ const HomeContent: React.FC<HomeContentProps> = ({
                 href="/seller"
                 className={`${buttonVariants({
                   variant: "secondary",
-                })} text-base text-blue-500 bg-yellow-400 hover:bg-yellow-300`}
+                })} text-base text-purple-500 bg-yellow-400 hover:bg-yellow-300`}
               >
                 <SparklesText
                   onClick={handleClick}
                   text="🎉Start selling"
-                  className="text-base text-blue-500"
+                  className="text-base text-purple-500"
                 />
               </Link>
-            </div>
-
-            <div className="mt-8 flex items-center justify-center">
-              <p className="text-sm text-blue-800 mr-2">Backed by</p>
-              <Image
-                src="https://res.cloudinary.com/db0i0umxn/image/upload/v1728757715/ibizlg_uqwnej.png"
-                alt="iBiz Africa logo"
-                width={120}
-                height={60}
-                className="h-auto w-auto"
-              />
             </div>
           </div>
         </MaxWidthWrapper>
       </div>
+
       <HowItWorks />
 
-      <div className="space-y-8 bg-gradient-to-b from-white to-blue-50 ">
+      {/* Main Product Section with Purple Accents */}
+      <div className="space-y-8 bg-gradient-to-b from-white to-purple-50">
         <ProductList title="Newest Arrivals ✨" data={latestProducts} />
         <ProductPromotion />
         <LastViewedCarousel />
